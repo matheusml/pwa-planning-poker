@@ -13,13 +13,16 @@
 }
 
 .opened > button {
+  cursor: pointer;
   background: #f0574a;
   border: none;
   border-radius: 3px;
   color: #fff;
   padding: 1em 3em;
   outline: none;
-  margin-top: 1em;
+  margin: 1em auto;
+  display: block;
+  font-size: 1.2em;
 }
 
 .opened > button:hover {
@@ -34,6 +37,10 @@
 @media (max-width: 975px)  {
   .content {
     margin: 1em;
+  }
+
+  .opened > button {
+    font-size: 1em;
   }
 }
 
