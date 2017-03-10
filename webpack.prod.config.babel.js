@@ -3,6 +3,7 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const OfflinePlugin = require('offline-plugin');
 
 const DefinePlugin = new webpack.DefinePlugin({
   'process.env': {
@@ -14,6 +15,7 @@ const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({ template: 'index.html' }
 const UglifyPlugin = new webpack.optimize.UglifyJsPlugin({ compress: { warnings: false } });
 const DedupePlugin = new webpack.optimize.DedupePlugin();
 const CommonChunksPlugin = new webpack.optimize.CommonsChunkPlugin({ names: ['vendor', 'manifest'] });
+const OfflinePluginConfig = new OfflinePlugin();
 
 module.exports = {
   entry: {
@@ -42,5 +44,5 @@ module.exports = {
       },
     ],
   },
-  plugins: [CleanPlugin, DefinePlugin, HTMLWebpackPluginConfig, UglifyPlugin, DedupePlugin, CommonChunksPlugin],
+  plugins: [CleanPlugin, DefinePlugin, HTMLWebpackPluginConfig, UglifyPlugin, DedupePlugin, CommonChunksPlugin, OfflinePluginConfig],
 };
