@@ -27,6 +27,12 @@ module.exports = {
     filename: '[name].[chunkhash].js',
     chunkFilename: '[chunkhash].bundle.js',
   },
+  resolve: {
+    alias: {
+      'react': 'preact-compat',
+      'react-dom': 'preact-compat',
+    }
+  },
   module: {
     loaders: [
       {

@@ -11,6 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "classnames": "^2.2.5",
+    "preact": "^7.2.0",
+    "preact-compat": "^3.14.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
   },
