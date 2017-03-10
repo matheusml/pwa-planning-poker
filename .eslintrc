@@ -1,0 +1,9 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "rules": {
+    "react/jsx-filename-extension": 0,
+    "linebreak-style": "off",
+    "class-methods-use-this": "off"
+  }
+}

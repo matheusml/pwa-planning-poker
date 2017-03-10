@@ -1,0 +1,18 @@
+.header {
+  position: fixed;
+  background-color: #fff;
+  opacity: 0.9;
+  height: 3em;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.header > h1 {
+  margin: .3em 0 0 1em;
+  color: #360643;
+  font-weight: 300;
+  font-size: 1.6em;
+}

@@ -1,0 +1,94 @@
+.container {
+  position: relative;
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 4px;
+  width: 15em;
+  height: 17em;
+  cursor: pointer;
+  margin: 1.5em;
+  border: solid 1px #ef574a;
+}
+
+.container:hover {
+  opacity: 0.75;
+}
+
+.opened {
+  width: 35em;
+  height: 40em;
+}
+
+.container > span {
+  position: absolute;
+  font-size: 8em;
+  color: #ef574a;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.opened > span {
+  font-size: 18em;
+}
+
+@media (max-width: 975px)  {
+  .container {
+    width: 12em;
+    height: 10em;
+    margin: .8em;
+  }
+
+  .opened {
+    width: 30em;
+    height: 32.5em;
+  }
+
+  .container > span {
+    font-size: 6em;
+  }
+
+  .opened > span {
+    font-size: 15em;
+  }
+}
+
+@media (max-width: 715px)  {
+  .container {
+    width: 5em;
+    height: 7em;
+    margin: .7em;
+  }
+
+  .opened {
+    width: 22em;
+    height: 25em;
+  }
+
+  .container > span {
+    font-size: 2.5em;
+  }
+
+  .opened > span {
+    font-size: 12em;
+  }
+}
+
+@media (max-width: 400px)  {
+  .container {
+    margin: .4em;
+  }
+
+  .opened {
+    width: 17em;
+    height: 20em;
+  }
+
+  .container > span {
+    font-size: 2em;
+  }
+
+  .opened > span {
+    font-size: 9em;
+  }
+}
