@@ -12,22 +12,6 @@
   animation: show .7s ease-in-out;
 }
 
-.opened > button {
-  cursor: pointer;
-  background: #f0574a;
-  border: none;
-  border-radius: 3px;
-  color: #fff;
-  padding: 1em 3em;
-  outline: none;
-  margin: 1em auto;
-  display: block;
-  font-size: 1.2em;
-}
-
-.opened > button:hover {
-  opacity: 0.75;
-}
 
 @keyframes show {
     0%   { opacity: 0; }
@@ -37,10 +21,6 @@
 @media (max-width: 975px)  {
   .content {
     margin: 1em;
-  }
-
-  .opened > button {
-    font-size: 1em;
   }
 }
 

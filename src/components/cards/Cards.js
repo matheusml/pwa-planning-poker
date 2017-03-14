@@ -32,7 +32,6 @@ class Cards extends Component {
             value={this.state.openedCard}
             openedCard={this.state.openedCard}
           />
-          <button onClick={() => this.toggleCard()}>voltar</button>
         </div>
       );
     }

@@ -3,6 +3,8 @@
 import React from 'react';
 import cx from 'classnames';
 
+import logo from '../../images/svgs/logo.svg';
+import back from '../../images/svgs/back.svg';
 import styles from './styles.scss';
 
 const onClick = (value, openedCard, toggleCard) => {
@@ -19,12 +21,36 @@ const getContainerStyles = (openedCard) => {
   return styles.container;
 };
 
+const renderBrandLogo = (openedCard) => {
+  if (openedCard) {
+    return (
+      <figure className={styles.brandLogo}>
+        <img src={logo} alt="Brand logo" />
+      </figure>
+    );
+  }
+  return null;
+};
+
+const renderBackButton = (openedCard) => {
+  if (openedCard) {
+    return (
+      <figure className={styles.backButton}>
+        <img src={back} alt="Back button" />
+      </figure>
+    );
+  }
+  return null;
+};
+
 const CardItem = ({ value, openedCard, toggleCard }) => (
   <div
     onClick={() => onClick(value, openedCard, toggleCard)}
     className={getContainerStyles(openedCard)}
   >
     <span>{value}</span>
+    {renderBrandLogo(openedCard)}
+    {renderBackButton(openedCard)}
   </div>
 );
 

@@ -5,9 +5,19 @@ exports[`Snapshot 1`] = `
   <header
     className="header"
   >
-    <h1>
-      AgilePoker
-    </h1>
+    <div
+      className="content"
+    >
+      <figure>
+        <img
+          alt="Logo brand"
+          src="test-file-stub"
+        />
+      </figure>
+      <h1>
+        AgilePoker
+      </h1>
+    </div>
   </header>
   <div
     className="container"

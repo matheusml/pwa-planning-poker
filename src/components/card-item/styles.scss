@@ -1,13 +1,14 @@
 .container {
   position: relative;
   display: inline-block;
-  background-color: #fff;
+  background-color: #fafafa;
   border-radius: 4px;
   width: 15em;
   height: 17em;
   cursor: pointer;
   margin: 1.5em;
-  border: solid 1px #ef574a;
+  border: solid 1px rgba(41, 0, 68, 0.7);
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
 }
 
 .container:hover {
@@ -15,21 +16,40 @@
 }
 
 .opened {
-  width: 35em;
+  width: 32em;
   height: 40em;
-}
-
-.container > span {
   position: absolute;
-  font-size: 8em;
-  color: #ef574a;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
+.container > span {
+  position: absolute;
+  font-size: 8em;
+  color: #2a0044;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+}
+
+.backButton {
+  position: absolute;
+  bottom: 0;
+  left: -1.5em;
+}
+
+.brandLogo {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 28em;
+}
+
 .opened > span {
-  font-size: 18em;
+  font-size: 16em;
+  font-weight: 300;
 }
 
 @media (max-width: 975px)  {
@@ -40,8 +60,8 @@
   }
 
   .opened {
-    width: 30em;
-    height: 32.5em;
+    width: 25em;
+    height: 32em;
   }
 
   .container > span {
@@ -49,7 +69,11 @@
   }
 
   .opened > span {
-    font-size: 15em;
+    font-size: 14em;
+  }
+
+  .brandLogo {
+    top: 23em;
   }
 }
 
@@ -61,8 +85,8 @@
   }
 
   .opened {
-    width: 22em;
-    height: 25em;
+    width: 17em;
+    height: 22em;
   }
 
   .container > span {
@@ -70,7 +94,11 @@
   }
 
   .opened > span {
-    font-size: 12em;
+    font-size: 10em;
+  }
+
+  .brandLogo {
+    top: 16em;
   }
 }
 
@@ -80,8 +108,8 @@
   }
 
   .opened {
-    width: 17em;
-    height: 20em;
+    width: 14em;
+    height: 18em;
   }
 
   .container > span {
@@ -89,6 +117,10 @@
   }
 
   .opened > span {
-    font-size: 9em;
+    font-size: 8em;
+  }
+
+  .brandLogo {
+    top: 14em;
   }
 }
