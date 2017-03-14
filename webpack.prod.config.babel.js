@@ -17,21 +17,24 @@ const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({ template: 'index.html' }
 const UglifyPlugin = new webpack.optimize.UglifyJsPlugin({ compress: { warnings: false } });
 const DedupePlugin = new webpack.optimize.DedupePlugin();
 const OfflinePluginConfig = new OfflinePlugin();
+const CommonChunksPlugin = new webpack.optimize.CommonsChunkPlugin({ names: ['vendor', 'manifest'] });
 
 const CopyWebpackPluginConfig = new CopyWebpackPlugin([
   { from: 'manifest.json' },
   { from: 'images', to: 'images' },
 ]);
 
-const ExtractText = new ExtractTextPlugin('styles.css');
+const ExtractText = new ExtractTextPlugin('[name].[chunkhash].css');
 
 module.exports = {
   entry: {
+    vendor: ['react', 'react-dom'],
     app: './src/index.js',
   },
   output: {
     path: 'public',
-    filename: 'bundle.js',
+    filename: '[name].[chunkhash].js',
+    chunkFilename: '[chunkhash].bundle.js',
   },
   resolve: {
     alias: {
@@ -60,5 +63,5 @@ module.exports = {
     ],
   },
   plugins: [CleanPlugin, DefinePlugin, HTMLWebpackPluginConfig, UglifyPlugin, DedupePlugin,
-    OfflinePluginConfig, ExtractText, CopyWebpackPluginConfig],
+    OfflinePluginConfig, ExtractText, CopyWebpackPluginConfig, CommonChunksPlugin],
 };
