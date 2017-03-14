@@ -4,7 +4,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const OfflinePlugin = require('offline-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const DefinePlugin = new webpack.DefinePlugin({
@@ -17,13 +17,9 @@ const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({ template: 'index.html' }
 const UglifyPlugin = new webpack.optimize.UglifyJsPlugin({ compress: { warnings: false } });
 const DedupePlugin = new webpack.optimize.DedupePlugin();
 const OfflinePluginConfig = new OfflinePlugin();
-const CopyConfig = new CopyPlugin([
-  {
-    from: 'manifest.json',
-  },
-  {
-    from: 'images',
-  },
+
+const CopyWebpackPluginConfig = new CopyWebpackPlugin([
+  { from: 'manifest.json' },
 ]);
 
 const ExtractText = new ExtractTextPlugin('styles.css');
@@ -63,5 +59,5 @@ module.exports = {
     ],
   },
   plugins: [CleanPlugin, DefinePlugin, HTMLWebpackPluginConfig, UglifyPlugin, DedupePlugin,
-    OfflinePluginConfig, CopyConfig, ExtractText],
+    OfflinePluginConfig, ExtractText, CopyWebpackPluginConfig],
 };

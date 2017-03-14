@@ -1,7 +1,7 @@
 {
   "name": "Planning Poker",
   "short_name": "Planning Poker",
-  "start_url": ".",
+  "start_url": "./?utm_source=web_app_manifest",
   "display": "standalone",
   "background_color": "#360643",
   "description": "A simple Planning Poker app",
