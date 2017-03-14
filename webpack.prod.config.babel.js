@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const OfflinePlugin = require('offline-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const DefinePlugin = new webpack.DefinePlugin({
   'process.env': {
@@ -25,6 +26,8 @@ const CopyConfig = new CopyPlugin([
     from: 'images',
   },
 ]);
+
+const ExtractText = new ExtractTextPlugin("[name].[chunkhash].css");
 
 module.exports = {
   entry: {
@@ -51,7 +54,10 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loader: 'style!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
+        loader: ExtractText.extract(
+          'style',
+          'css?modules&importLoaders=1&localIdentName=[hash:base64:5]'
+        ),
       },
       {
         test: /.(png|woff(2)?|eot|otf|ttf|svg)(\?[a-z0-9=\.]+)?$/,
@@ -59,5 +65,6 @@ module.exports = {
       },
     ],
   },
-  plugins: [CleanPlugin, DefinePlugin, HTMLWebpackPluginConfig, UglifyPlugin, DedupePlugin, CommonChunksPlugin, OfflinePluginConfig, CopyConfig],
+  plugins: [CleanPlugin, DefinePlugin, HTMLWebpackPluginConfig, UglifyPlugin, DedupePlugin,
+    CommonChunksPlugin, OfflinePluginConfig, CopyConfig, ExtractText],
 };
