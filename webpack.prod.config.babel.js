@@ -20,7 +20,7 @@ const OfflinePluginConfig = new OfflinePlugin();
 
 const CopyWebpackPluginConfig = new CopyWebpackPlugin([
   { from: 'manifest.json' },
-  { from: 'images', to: 'images' },
+  { from: 'images' },
 ]);
 
 const ExtractText = new ExtractTextPlugin('styles.css');
