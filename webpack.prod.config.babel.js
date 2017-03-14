@@ -1,11 +1,11 @@
-/* eslint-disable */
+/* eslint-disable import/no-extraneous-dependencies */
 
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const OfflinePlugin = require('offline-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const DefinePlugin = new webpack.DefinePlugin({
   'process.env': {
@@ -16,7 +16,6 @@ const CleanPlugin = new CleanWebpackPlugin(['public']);
 const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({ template: 'index.html' });
 const UglifyPlugin = new webpack.optimize.UglifyJsPlugin({ compress: { warnings: false } });
 const DedupePlugin = new webpack.optimize.DedupePlugin();
-const CommonChunksPlugin = new webpack.optimize.CommonsChunkPlugin({ names: ['vendor', 'manifest'] });
 const OfflinePluginConfig = new OfflinePlugin();
 const CopyConfig = new CopyPlugin([
   {
@@ -27,23 +26,21 @@ const CopyConfig = new CopyPlugin([
   },
 ]);
 
-const ExtractText = new ExtractTextPlugin("[name].[chunkhash].css");
+const ExtractText = new ExtractTextPlugin('styles.css');
 
 module.exports = {
   entry: {
-    vendor: ['react', 'react-dom'],
     app: './src/index.js',
   },
   output: {
     path: 'public',
-    filename: '[name].[chunkhash].js',
-    chunkFilename: '[chunkhash].bundle.js',
+    filename: 'bundle.js',
   },
   resolve: {
     alias: {
-      'react': 'preact-compat',
+      react: 'preact-compat',
       'react-dom': 'preact-compat',
-    }
+    },
   },
   module: {
     loaders: [
@@ -56,7 +53,7 @@ module.exports = {
         test: /\.scss$/,
         loader: ExtractText.extract(
           'style',
-          'css?modules&importLoaders=1&localIdentName=[hash:base64:5]'
+          'css?modules&importLoaders=1&localIdentName=[hash:base64:5]',
         ),
       },
       {
@@ -66,5 +63,5 @@ module.exports = {
     ],
   },
   plugins: [CleanPlugin, DefinePlugin, HTMLWebpackPluginConfig, UglifyPlugin, DedupePlugin,
-    CommonChunksPlugin, OfflinePluginConfig, CopyConfig, ExtractText],
+    OfflinePluginConfig, CopyConfig, ExtractText],
 };

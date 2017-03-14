@@ -1,12 +1,10 @@
 CACHE MANIFEST
-#ver:2017-03-14 11:14:44
+#ver:2017-03-14 11:22:46
 #plugin:4.6.1
 
 CACHE:
-../app.4cec5c0d2a530b76ef93.js
-../vendor.d1dd7ce65df91ed5bf8e.js
-../manifest.3f9c247b5f9c9bf74cd9.js
-../app.4cec5c0d2a530b76ef93.css
+../bundle.js
+../styles.css
 ../
 
 NETWORK:
