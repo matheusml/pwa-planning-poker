@@ -4,7 +4,7 @@ import styles from './styles.scss';
 
 const Header = () => (
   <header className={styles.header}>
-    <h1>Planning Poker</h1>
+    <h1>Agile Poker</h1>
   </header>
 );
 
