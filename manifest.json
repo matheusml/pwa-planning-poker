@@ -4,7 +4,7 @@
   "start_url": "./?utm_source=web_app_manifest",
   "display": "standalone",
   "background_color": "#360643",
-  "theme_color": "#ef574a",
+  "theme_color": "#360643",
   "description": "A simple Agile Planning Poker app",
   "icons": [
     {
