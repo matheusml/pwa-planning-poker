@@ -1,5 +1,9 @@
 .container {
+  display: flex;
+  flex-flow: row wrap;
+  width: 25em;
   padding: 3em 0;
+  margin: 0 auto;
   animation: show .7s ease-in-out;
 }
 
@@ -9,23 +13,56 @@
 }
 
 .opened {
-  animation: show .7s ease-in-out;
+  animation: show 1s ease-in-out;
 }
 
+.closed {
+  animation: hide 1s ease-in-out;
+}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.quotes {
+  position: relative;
+  line-height: 0.5;
+}
+
+.quotes > p {
+  font-size: 1em;
+  font-weight: bold;
+  font-style: oblique;
+  color: #2a0044;
+}
+
+.firstText {
+  padding-top: 2em;
+}
+
+.firstText::before{
+  position: absolute;
+  left: 0;
+  top: 0.3em;
+  content: "\201C";
+  font-size: 4em;
+  font-weight: bold;
+  color: #999;
+}
+
+.firstText::after{
+  content: "";
+}
 
 @keyframes show {
     0%   { opacity: 0; }
     100% { opacity: 1; }
 }
 
-@media (max-width: 975px)  {
-  .content {
-    margin: 1em;
-  }
-}
-
-@media (max-width: 715px)  {
-  .content {
-    margin: .5em;
-  }
+@keyframes hide {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
 }

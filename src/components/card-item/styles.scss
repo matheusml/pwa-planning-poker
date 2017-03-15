@@ -3,10 +3,10 @@
   display: inline-block;
   background-color: #fafafa;
   border-radius: 4px;
-  width: 15em;
-  height: 17em;
+  width: 6em;
+  height: 9em;
   cursor: pointer;
-  margin: 1.5em;
+  margin: .4em;
   border: solid 1px rgba(41, 0, 68, 0.7);
   box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
 }
@@ -16,17 +16,14 @@
 }
 
 .opened {
-  width: 32em;
-  height: 40em;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 14em;
+  height: 20em;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 }
 
 .container > span {
   position: absolute;
-  font-size: 8em;
+  font-size: 3em;
   color: #2a0044;
   top: 50%;
   left: 50%;
@@ -44,83 +41,10 @@
   margin: 0 auto;
   left: 0;
   right: 0;
-  top: 28em;
+  top: 14em;
 }
 
 .opened > span {
-  font-size: 16em;
+  font-size: 6em;
   font-weight: 300;
-}
-
-@media (max-width: 975px)  {
-  .container {
-    width: 12em;
-    height: 10em;
-    margin: .8em;
-  }
-
-  .opened {
-    width: 25em;
-    height: 32em;
-  }
-
-  .container > span {
-    font-size: 6em;
-  }
-
-  .opened > span {
-    font-size: 14em;
-  }
-
-  .brandLogo {
-    top: 23em;
-  }
-}
-
-@media (max-width: 715px)  {
-  .container {
-    width: 5em;
-    height: 7em;
-    margin: .7em;
-  }
-
-  .opened {
-    width: 17em;
-    height: 22em;
-  }
-
-  .container > span {
-    font-size: 2.5em;
-  }
-
-  .opened > span {
-    font-size: 10em;
-  }
-
-  .brandLogo {
-    top: 16em;
-  }
-}
-
-@media (max-width: 400px)  {
-  .container {
-    margin: .4em;
-  }
-
-  .opened {
-    width: 14em;
-    height: 18em;
-  }
-
-  .container > span {
-    font-size: 2em;
-  }
-
-  .opened > span {
-    font-size: 8em;
-  }
-
-  .brandLogo {
-    top: 14em;
-  }
 }

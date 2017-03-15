@@ -26,12 +26,16 @@ class Cards extends Component {
   renderCards() {
     if (this.state.openedCard) {
       return (
-        <div className={styles.opened}>
+        <div className={styles.card}>
           <CardItem
             toggleCard={this.toggleCard}
             value={this.state.openedCard}
             openedCard={this.state.openedCard}
           />
+          <div className={styles.quotes}>
+            <p className={styles.firstText}>If there is no struggle,</p>
+            <p>there is no progress.</p>
+          </div>
         </div>
       );
     }
@@ -46,10 +50,15 @@ class Cards extends Component {
   }
 
   render() {
+    const animationStyles = this.state.openedCard ?
+      styles.opened : styles.closed;
+
     return (
       <div className={styles.container}>
         <div className={styles.content}>
-          {this.renderCards()}
+          <div className={animationStyles}>
+            {this.renderCards()}
+          </div>
         </div>
       </div>
     );
