@@ -1,7 +1,7 @@
 .container {
   display: flex;
   flex-flow: row wrap;
-  width: 25em;
+  max-width: 25em;
   padding: 3em 0;
   margin: 0 auto;
   animation: show .7s ease-in-out;
@@ -24,7 +24,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -40%);
 }
 
 .quotes {
@@ -45,8 +45,8 @@
 
 .firstText::before{
   position: absolute;
-  left: 0;
-  top: 0.3em;
+  left: -0.5em;
+  top: 0.2em;
   content: "\201C";
   font-size: 4em;
   font-weight: bold;
