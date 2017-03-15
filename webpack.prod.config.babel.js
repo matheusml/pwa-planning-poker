@@ -21,7 +21,8 @@ const CommonChunksPlugin = new webpack.optimize.CommonsChunkPlugin({ names: ['ve
 
 const CopyWebpackPluginConfig = new CopyWebpackPlugin([
   { from: 'manifest.json' },
-  { from: 'src/images', to: 'images' },
+  { from: 'favicon.ico' },
+  { from: 'src/images/icons', to: 'images' },
 ]);
 
 const ExtractText = new ExtractTextPlugin('[name].[chunkhash].css');
