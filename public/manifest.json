@@ -1,8 +1,8 @@
 {
   "name": "AgilePoker",
   "short_name": "AgilePoker",
-  "theme_color": "#360643",
-  "background_color": "#360643",
+  "theme_color": "#2a0044",
+  "background_color": "#2a0044",
   "display": "standalone",
   "start_url": "/",
   "icons": [
