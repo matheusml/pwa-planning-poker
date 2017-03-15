@@ -1,0 +1,15 @@
+[debug] ----------------------------------------------------------------------
+[debug] Command:      /home/matheuslima/.nvm/versions/node/v6.5.0/bin/node /home/matheuslima/.nvm/versions/node/v6.5.0/bin/firebase deploy
+[debug] CLI Version:  3.5.0
+[debug] Platform:     linux
+[debug] Node Version: v6.5.0
+[debug] Time:         Wed Mar 15 2017 17:57:33 GMT-0300 (BRT)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[debug] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/planning-poker-5ea54  
+ Wed Mar 15 2017 17:57:33 GMT-0300 (BRT)
+[debug] <<< HTTP RESPONSE 200
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/planning-poker-5ea54/tokens  
+ Wed Mar 15 2017 17:57:39 GMT-0300 (BRT)
+[debug] <<< HTTP RESPONSE 200
