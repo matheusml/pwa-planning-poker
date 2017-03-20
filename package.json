@@ -39,7 +39,6 @@
     "html-webpack-plugin": "^2.26.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^19.0.2",
-    "offline-plugin": "^4.6.1",
     "react-test-renderer": "^15.4.2",
     "sass-loader": "^4.1.1",
     "style-loader": "^0.13.1",
