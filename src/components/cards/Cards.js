@@ -12,7 +12,7 @@ class Cards extends Component {
     };
 
     this.cards = [
-      '?', '0', '1/2', '1', '2', '3', '5', '8', '13', '20', '40', '100',
+      '?', '0', '1/2', '1', '2', '3', '5', '8', '13', '21', '34', '55',
     ];
 
     this.toggleCard = this.toggleCard.bind(this);

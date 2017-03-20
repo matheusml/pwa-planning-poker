@@ -87,7 +87,7 @@ exports[`Snapshot 1`] = `
         onClick={[Function]}
       >
         <span>
-          20
+          21
         </span>
       </div>
       <div
@@ -95,7 +95,7 @@ exports[`Snapshot 1`] = `
         onClick={[Function]}
       >
         <span>
-          40
+          34
         </span>
       </div>
       <div
@@ -103,7 +103,7 @@ exports[`Snapshot 1`] = `
         onClick={[Function]}
       >
         <span>
-          100
+          55
         </span>
       </div>
     </div>
