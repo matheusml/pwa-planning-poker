@@ -1,14 +1,15 @@
 .container {
   display: flex;
   flex-flow: row wrap;
-  max-width: 28em;
+  justify-content: space-between;
   padding: 3em 0;
+  max-width:28em;
   margin: 0 auto;
   animation: show .7s ease-in-out;
 }
 
 .content {
-  margin: 2em;
+  margin: 2em 0;
   text-align: center;
 }
 
