@@ -9,7 +9,7 @@ const Header = () => (
       <figure>
         <img src={logo} alt="Logo brand" />
       </figure>
-      <h1>AgilePoker</h1>
+      <h1>FreighTech | Poker</h1>
     </div>
   </header>
 );

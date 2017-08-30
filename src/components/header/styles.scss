@@ -1,9 +1,10 @@
+
 .header {
-  position: fixed;
-  background-color: #2a0044;
-  height: 3.4em;
-  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.5);
+  background-color: #4a74f9;
   top: 0;
+  padding:.3rem 0;
+  display: flex;
+  align-items:center;
   left: 0;
   right: 0;
   width: 100%;
@@ -22,7 +23,7 @@
 }
 
 .content img {
-  width: 2em;
+  width: 3.8em;
 }
 
 .content > h1 {
