@@ -1,71 +1,78 @@
 .container {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  padding: 3em 0;
-  max-width:28em;
-  margin: 0 auto;
-  animation: show .7s ease-in-out;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    max-width: 28em;
+    margin: 0 auto; 
+    animation: show .7s ease-in-out;
 }
 
 .content {
-  margin: 2em 0;
-  text-align: center;
+    margin: 2em 0;
+    text-align: center;
 }
 
 .opened {
-  animation: show 1s ease-in-out;
+    animation: show 1s ease-in-out;
 }
 
 .closed {
-  animation: hide 1s ease-in-out;
+    animation: hide 1s ease-in-out;
 }
 
 .card {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .quotes {
-  position: relative;
-  line-height: 0.5;
-  width: 165px;
-  margin: 0 auto;
+    position: relative;
+    line-height: 0.5;
+    width: 165px;
+    margin: 0 auto;
 }
 
-.quotes > p {
-  font-size: 14px;
-  font-weight: bold;
-  font-style: oblique;
-  color: #2a0044;
+.quotes>p {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: oblique;
+    color: black;
 }
 
 .firstText {
-  padding-top: 2em;
+    padding-top: 2em;
 }
 
-.firstText::before{
-  position: absolute;
-  left: -0.5em;
-  top: 0.2em;
-  content: "\201C";
-  font-size: 60px;
-  font-weight: bold;
-  color: #999;
+.firstText::before {
+    position: absolute;
+    left: -0.5em;
+    top: 0.2em;
+    content: "\201C";
+    font-size: 60px;
+    font-weight: bold;
+    color: #999;
 }
 
-.firstText::after{
-  content: "";
+.firstText::after {
+    content: "";
 }
 
 @keyframes show {
-    0%   { opacity: 0; }
-    100% { opacity: 1; }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @keyframes hide {
-    0%   { opacity: 0; }
-    100% { opacity: 1; }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
